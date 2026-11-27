@@ -1,1 +1,1156 @@
 
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Ramos | NR1 Oficial - Guantes de Arquero & Mentoría Pro</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Teko (Titulares Deportivos) & Inter (Lectura) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Teko', 'sans-serif'],
+                    },
+                    colors: {
+                        nr: {
+                            gold: '#FACC15',
+                            goldHover: '#EAB308',
+                            dark: '#090D16',
+                            card: '#111827',
+                            red: '#DC2626',
+                            blue: '#2563EB'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados complementarios */
+        body {
+            background-color: #090D16;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(circle at 75% 25%, rgba(250, 204, 21, 0.14) 0%, rgba(9, 13, 22, 0.95) 55%),
+                              linear-gradient(to bottom, rgba(9, 13, 22, 0.7), #090D16);
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FEF08A 0%, #FACC15 50%, #CA8A04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 15px 35px -5px rgba(250, 204, 21, 0.18);
+            border-color: rgba(250, 204, 21, 0.5);
+        }
+
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090D16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FACC15;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-yellow-400 selection:text-slate-950">
+
+    <!-- NAVBAR FIJA -->
+    <nav class="fixed top-0 inset-x-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo NR1 -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center text-slate-950 font-display font-bold text-2xl tracking-wider shadow-lg shadow-yellow-500/20 group-hover:scale-105 transition-transform">
+                        NR1
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-display text-2xl font-bold tracking-wide text-white leading-none">NELSON RAMOS</span>
+                            <i class="fa-solid fa-circle-check text-blue-500 text-xs" title="Perfil Oficial Verificado"></i>
+                        </div>
+                        <span class="text-[11px] uppercase tracking-widest text-yellow-400 font-semibold block">Guantes & Academia Pro</span>
+                    </div>
+                </a>
+
+                <!-- Links Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#catalogo" class="text-sm font-semibold text-slate-300 hover:text-yellow-400 transition-colors">Catálogo NR1</a>
+                    <a href="#activar" class="text-sm font-semibold text-slate-300 hover:text-yellow-400 transition-colors">Activar NR1</a>
+                    <a href="#trayectoria" class="text-sm font-semibold text-slate-300 hover:text-yellow-400 transition-colors">Trayectoria</a>
+                    <button onclick="openWhatsAppGeneral()" class="bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-yellow-400/20 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Asesoría Directa</span>
+                    </button>
+                </div>
+
+                <!-- Botón Móvil -->
+                <div class="md:hidden flex items-center gap-3">
+                    <a href="#catalogo" class="bg-yellow-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-lg">
+                        Ver Catálogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 hero-pattern border-b border-slate-800/60 overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Izquierda: Copy & CTA -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-semibold text-yellow-400 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+                        <span>@nelramosoficial1 • 126K+ Seguidores en Instagram</span>
+                    </div>
+
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-[0.95] text-white mb-6">
+                        EL ARCO SE DEFIENDE CON <span class="text-gradient-gold">JERARQUÍA NR1</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Guantes de alto rendimiento diseñados desde la experiencia del fútbol profesional por <strong class="text-white">Nelson Ramos</strong> — Exarquero de Millonarios, América, Deportivo Pasto, Medellín y Director Técnico Profesional. Agarre extremo, protección y estilo para arqueros élite e infantiles.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#catalogo" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold text-base transition-all flex items-center justify-center gap-2.5 shadow-xl shadow-yellow-400/20">
+                            <i class="fa-solid fa-mitten"></i>
+                            <span>Explorar Catálogo en Vivo</span>
+                        </a>
+                        <button onclick="openWhatsAppGeneral()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-semibold text-base transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <!-- Stats rápidas -->
+                    <div class="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-display text-3xl sm:text-4xl font-bold text-yellow-400">100%</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Látex Alemán Pro</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-3xl sm:text-4xl font-bold text-white">+18 AÑOS</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Élite Profesional</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-3xl sm:text-4xl font-bold text-blue-400">ENVÍOS</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">A Toda Colombia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta Visual Marca Personal -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md">
+                        <!-- Marco con degradado Instagram/NR1 -->
+                        <div class="rounded-3xl p-1 bg-gradient-to-tr from-yellow-400 via-red-600 to-blue-600 shadow-2xl">
+                            <div class="bg-slate-900 rounded-[22px] p-6 sm:p-8 relative overflow-hidden">
+                                <!-- Badge Oficial -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-14 h-14 rounded-full p-0.5 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                                            <img src="https://placehold.co/200x200/111827/FACC15?text=NR1" 
+                                                 alt="Nelson Ramos Avatar" 
+                                                 class="w-full h-full object-cover rounded-full border-2 border-slate-950">
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-1.5">
+                                                <h3 class="font-bold text-white text-base">nelramosoficial1</h3>
+                                                <i class="fa-solid fa-circle-check text-blue-500 text-sm"></i>
+                                            </div>
+                                            <p class="text-xs text-slate-400">Nelson Ramos • Figura Pública</p>
+                                        </div>
+                                    </div>
+                                    <span class="px-2.5 py-1 rounded-lg bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 text-xs font-bold">
+                                        OFICIAL
+                                    </span>
+                                </div>
+
+                                <!-- Destacados estilo Instagram Highlights -->
+                                <div class="grid grid-cols-4 gap-2 mb-6 text-center">
+                                    <button onclick="filterCatalog('Activar NR1')" class="group flex flex-col items-center gap-1.5 cursor-pointer">
+                                        <div class="w-14 h-14 rounded-full bg-slate-800 border-2 border-yellow-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+                                            <i class="fa-solid fa-bolt text-yellow-400 text-lg"></i>
+                                        </div>
+                                        <span class="text-[11px] text-slate-300 font-medium truncate w-full">Activar NR1</span>
+                                    </button>
+                                    <button onclick="filterCatalog('Guantes')" class="group flex flex-col items-center gap-1.5 cursor-pointer">
+                                        <div class="w-14 h-14 rounded-full bg-slate-800 border-2 border-red-500 flex items-center justify-center group-hover:scale-105 transition-transform">
+                                            <i class="fa-solid fa-hand text-red-500 text-lg"></i>
+                                        </div>
+                                        <span class="text-[11px] text-slate-300 font-medium truncate w-full">Guantes Pro</span>
+                                    </button>
+                                    <button onclick="filterCatalog('Edición Limitada')" class="group flex flex-col items-center gap-1.5 cursor-pointer">
+                                        <div class="w-14 h-14 rounded-full bg-slate-800 border-2 border-blue-500 flex items-center justify-center group-hover:scale-105 transition-transform">
+                                            <i class="fa-solid fa-crown text-blue-400 text-lg"></i>
+                                        </div>
+                                        <span class="text-[11px] text-slate-300 font-medium truncate w-full">Edición 🦏</span>
+                                    </button>
+                                    <button onclick="filterCatalog('Infantil')" class="group flex flex-col items-center gap-1.5 cursor-pointer">
+                                        <div class="w-14 h-14 rounded-full bg-slate-800 border-2 border-emerald-500 flex items-center justify-center group-hover:scale-105 transition-transform">
+                                            <i class="fa-solid fa-child-reaching text-emerald-400 text-lg"></i>
+                                        </div>
+                                        <span class="text-[11px] text-slate-300 font-medium truncate w-full">Niños NR1</span>
+                                    </button>
+                                </div>
+
+                                <!-- Banner Destacado -->
+                                <div class="rounded-2xl bg-gradient-to-r from-slate-950 to-slate-800 p-4 border border-slate-700/70">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-400">Stock Actualizado en Vivo</span>
+                                            <h4 class="font-display text-2xl font-bold text-white mt-0.5">COLECCIÓN GUANTES NR1</h4>
+                                            <p class="text-xs text-slate-400">Todas las tallas disponibles • Adulto y Niño</p>
+                                        </div>
+                                        <a href="#catalogo" class="w-10 h-10 rounded-xl bg-yellow-400 text-slate-950 flex items-center justify-center hover:bg-yellow-300 transition-colors">
+                                            <i class="fa-solid fa-arrow-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CATÁLOGO AUTOADMINISTRABLE DESDE GOOGLE DRIVE -->
+    <section id="catalogo" class="py-20 bg-slate-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado del Catálogo + Indicador de Estado Drive -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                        <span class="px-3 py-1 rounded-md bg-yellow-400/10 text-yellow-400 text-xs font-bold uppercase tracking-wider border border-yellow-400/20">
+                            Catálogo Oficial NR1
+                        </span>
+                        <span id="drive-sync-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-900 text-slate-400 text-xs font-medium border border-slate-800">
+                            <i class="fa-brands fa-google-drive text-blue-400"></i>
+                            <span id="drive-sync-text">Catálogo Demo Listo</span>
+                        </span>
+                    </div>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase text-white tracking-tight">
+                        REFERENCIAS DISPONIBLES <span class="text-yellow-400">EN STOCK</span>
+                    </h2>
+                </div>
+
+                <!-- Botón Recargar desde Drive -->
+                <div class="flex items-center gap-3">
+                    <button onclick="syncCatalogFromDrive(true)" id="btn-refresh-drive" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-rotate" id="refresh-icon"></i>
+                        <span>Actualizar Inventario</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Barra de Filtros por Categoría y Buscador -->
+            <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 bg-slate-900/70 p-3 rounded-2xl border border-slate-800/80 mb-10">
+                <!-- Botones de Categoría -->
+                <div id="category-filters" class="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0 no-scrollbar">
+                    <button onclick="filterCatalog('Todos')" data-cat="Todos" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-yellow-400 text-slate-950 transition-all whitespace-nowrap cursor-pointer">
+                        Todos
+                    </button>
+                    <button onclick="filterCatalog('Guantes')" data-cat="Guantes" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all whitespace-nowrap cursor-pointer">
+                        Guantes Pro
+                    </button>
+                    <button onclick="filterCatalog('Edición Limitada')" data-cat="Edición Limitada" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all whitespace-nowrap cursor-pointer">
+                        Edición Limitada
+                    </button>
+                    <button onclick="filterCatalog('Infantil')" data-cat="Infantil" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all whitespace-nowrap cursor-pointer">
+                        Infantil / Niños
+                    </button>
+                    <button onclick="filterCatalog('Activar NR1')" data-cat="Activar NR1" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all whitespace-nowrap cursor-pointer">
+                        Activar NR1 & Accesorios
+                    </button>
+                </div>
+
+                <!-- Buscador rápido -->
+                <div class="relative min-w-[240px]">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                    <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Buscar referencia o talla..." 
+                           class="w-full bg-slate-950 border border-slate-800 focus:border-yellow-400 rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-slate-500 outline-none transition-colors">
+                </div>
+            </div>
+
+            <!-- Estado de Carga / Skeleton -->
+            <div id="catalog-loader" class="hidden py-16 text-center">
+                <div class="inline-block w-12 h-12 border-4 border-slate-800 border-t-yellow-400 rounded-full animate-spin mb-4"></div>
+                <p class="text-slate-400 text-sm font-medium">Sincronizando referencias directamente desde Google Drive...</p>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Las tarjetas se renderizan dinámicamente aquí -->
+            </div>
+
+            <!-- Estado Vacío (si un filtro no arroja resultados) -->
+            <div id="empty-state" class="hidden py-16 text-center bg-slate-900/40 rounded-3xl border border-slate-800">
+                <i class="fa-solid fa-box-open text-4xl text-slate-600 mb-3"></i>
+                <h3 class="text-lg font-bold text-white">No hay referencias en esta categoría</h3>
+                <p class="text-sm text-slate-400 mt-1 mb-4">Prueba seleccionando otra categoría o limpia el filtro de búsqueda.</p>
+                <button onclick="filterCatalog('Todos')" class="px-5 py-2 rounded-xl bg-yellow-400 text-slate-950 font-bold text-xs cursor-pointer">
+                    Ver Todo el Catálogo
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN ACTIVAR NR1 & MENTORÍA DE ARQUEROS -->
+    <section id="activar" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider border border-blue-500/20">
+                        Metodología Nelson Ramos
+                    </span>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase text-white mt-3 mb-5 leading-none">
+                        ACTIVAR NR1 & <span class="text-yellow-400">ENTRENAMIENTO PRO</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                        No solo vendemos guantes: formamos arqueros con mentalidad ganadora. Conoce el protocolo <strong class="text-white">Activar NR1</strong> para maximizar la vida útil y el agarre de tu látex desde el primer uso, y accede a clínicas y entrenamientos personalizados dirigidos por Nelson Ramos.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-400/10 text-yellow-400 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Protocolo Activar NR1</h4>
+                                <p class="text-xs text-slate-400 mt-1">Pre-lavado técnico e hidratación del látex alemán para activar el grip profesional antes de tu primer partido.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800">
+                            <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-whistle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Clínicas y Mentoría de Arqueros</h4>
+                                <p class="text-xs text-slate-400 mt-1">Entrenamiento específico de juego aéreo, achique, potencia de piernas y cobros de tiro libre con sello profesional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openWhatsAppCustom('Hola Nelson Ramos, quiero información sobre el entrenamiento de arqueros y cómo activar mis guantes NR1.')" 
+                            class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all inline-flex items-center gap-2.5 shadow-lg shadow-blue-600/20 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Consultar Cupos de Entrenamiento</span>
+                    </button>
+                </div>
+
+                <!-- Tarjetas de Especificaciones Técnicas del Guante NR1 -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-3xl bg-slate-950 border border-slate-800 hover:border-yellow-400/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-yellow-400 text-slate-950 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-hand-fist"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white uppercase">Agarre Extremo</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Palma de látex natural de 4mm de alta densidad con desempeño superior tanto en seco como en lluvia intensa.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-slate-950 border border-slate-800 hover:border-yellow-400/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 text-yellow-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white uppercase">Muñequera Elástica</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Cierre de doble vuelta que brinda firmeza estructural y protección total en cada caída y bloqueo.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-slate-950 border border-slate-800 hover:border-yellow-400/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white uppercase">Dorso Transpirable</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Cuerpo en neopreno y malla respirable con injertos de goma 3D para despejes de puño con máxima potencia.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-slate-950 border border-slate-800 hover:border-yellow-400/40 transition-colors">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 text-red-400 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white uppercase">Aval Profesional</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Probados en alta competencia por arqueros profesionales y academias formativas en toda Latinoamérica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TRAYECTORIA Y CLUBES -->
+    <section id="trayectoria" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-yellow-400">Legado en el Fútbol Profesional</span>
+            <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase text-white mt-2 mb-4">
+                TRAYECTORIA & CLUBES DEFENDIDOS
+            </h2>
+            <p class="text-slate-400 text-sm max-w-2xl mx-auto mb-12">
+                Director Técnico Profesional y arquero histórico recordado por su liderazgo, atajadas decisivas y goles de tiro libre en el fútbol colombiano e internacional.
+            </p>
+
+            <!-- Grid de Clubes -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-blue-500 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">MILLONARIOS FC</span>
+                    <span class="text-[11px] text-slate-400">Campeón Liga & Copa</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-red-600 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">AMÉRICA DE CALI</span>
+                    <span class="text-[11px] text-slate-400">Arquero Profesional</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-red-500 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">DEPORTIVO PASTO</span>
+                    <span class="text-[11px] text-slate-400">Referente Histórico</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-blue-600 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">IND. MEDELLÍN</span>
+                    <span class="text-[11px] text-slate-400">Arquero Profesional</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-yellow-400 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">ATL. BUCARAMANGA</span>
+                    <span class="text-[11px] text-slate-400">Arquero Profesional</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-red-700 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">DEPORTIVO QUITO</span>
+                    <span class="text-[11px] text-slate-400">Ecuador • Internacional</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-sky-400 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">FORTALEZA CEIF</span>
+                    <span class="text-[11px] text-slate-400">Arquero Profesional</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-shield text-amber-400 text-2xl mb-2"></i>
+                    <span class="font-display text-xl font-bold text-white tracking-wide">BOCA JRS. CALI</span>
+                    <span class="text-[11px] text-slate-400">Arquero & DT Pro</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CON BOTÓN DISCRETO DE CONFIGURACIÓN GOOGLE DRIVE -->
+    <footer class="bg-slate-950 border-t border-slate-900 pt-12 pb-24 sm:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-yellow-400 text-slate-950 font-display font-bold text-xl flex items-center justify-center">
+                        NR1
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-white">Nelson Ramos Oficial • NR1</p>
+                        <p class="text-xs text-slate-500">Todos los derechos reservados © <span id="year"></span></p>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/nelramosoficial1/" target="_blank" rel="noopener noreferrer" 
+                       class="w-10 h-10 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <button onclick="openWhatsAppGeneral()" 
+                            class="w-10 h-10 rounded-xl bg-slate-900 hover:bg-green-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Botón Discreto de Administración Drive -->
+                <div>
+                    <button onclick="openDriveConfigModal()" 
+                            class="text-xs text-slate-500 hover:text-yellow-400 transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/60 border border-slate-800/80 cursor-pointer">
+                        <span>⚙️ Configurar Carpeta Drive</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <button onclick="openWhatsAppGeneral()" aria-label="Contactar por WhatsApp"
+            class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 text-white shadow-2xl shadow-green-500/40 flex items-center justify-center text-3xl transition-transform hover:scale-110 cursor-pointer">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+    <!-- MODAL 1: VISTA PREVIA DE PRODUCTO (LIGHTBOX) -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm">
+        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative animate-fade-in">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-950/80 text-slate-300 hover:text-white flex items-center justify-center border border-slate-700 cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="bg-slate-950 flex items-center justify-center p-6 min-h-[280px]">
+                    <img id="modal-img" src="" alt="Producto NR1" class="max-h-72 w-auto object-contain rounded-xl">
+                </div>
+                <div class="p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <span id="modal-cat" class="px-2.5 py-1 rounded-md bg-yellow-400/10 text-yellow-400 text-[11px] font-bold uppercase tracking-wider">
+                            Categoría
+                        </span>
+                        <h3 id="modal-title" class="font-display text-3xl font-bold text-white uppercase mt-3 leading-tight">
+                            Nombre del Producto
+                        </h3>
+                        <p id="modal-price" class="text-2xl font-extrabold text-yellow-400 mt-2">
+                            $0
+                        </p>
+                        <p class="text-xs text-slate-400 mt-4 leading-relaxed">
+                            Referencia disponible en inventario oficial NR1. Consulta disponibilidad de tallas (6, 7, 8, 9, 10, 11) y envíos nacionales directamente con nuestro equipo.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800">
+                        <button id="modal-wa-btn" class="w-full py-3.5 px-4 rounded-xl bg-green-500 hover:bg-green-400 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Comprar esta referencia</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: CONFIGURACIÓN DE GOOGLE DRIVE AUTOADMINISTRABLE -->
+    <div id="drive-config-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+            
+            <!-- Header Modal -->
+            <div class="flex items-start justify-between gap-4 pb-5 border-b border-slate-800">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-brands fa-google-drive text-yellow-400 text-xl"></i>
+                        <h3 class="font-display text-3xl font-bold text-white uppercase">Conector Autoadministrable Google Drive</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">
+                        Sube, reemplaza o borra fotos en tu carpeta de Google Drive y la tienda se actualizará sola sin tocar código.
+                    </p>
+                </div>
+                <button onclick="closeDriveConfigModal()" class="w-9 h-9 rounded-xl bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Contenido -->
+            <div class="space-y-6 mt-6 max-h-[70vh] overflow-y-auto pr-1">
+                
+                <!-- Paso 1: Regla de Nombres -->
+                <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800">
+                    <h4 class="text-sm font-bold text-yellow-400 flex items-center gap-2 mb-2">
+                        <span class="w-5 h-5 rounded-full bg-yellow-400 text-slate-950 text-xs flex items-center justify-center font-extrabold">1</span>
+                        ¿Cómo nombrar las fotos en tu carpeta de Google Drive?
+                    </h4>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                        Solo sube las imágenes a tu carpeta pública de Drive usando este formato exacto separado por guiones (<code class="text-yellow-300">-</code>):
+                    </p>
+                    <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 font-mono text-xs text-emerald-400">
+                        Nombre del Producto - $Precio - Categoria.jpg
+                    </div>
+                    <div class="mt-2.5 text-[11px] text-slate-400 space-y-1">
+                        <p>• Ejemplo 1: <span class="text-white">Guantes NR1 Pro Gold - $280.000 - Guantes.jpg</span></p>
+                        <p>• Ejemplo 2: <span class="text-white">Guantes NR1 Rinoceronte - $310.000 - Edición Limitada.png</span></p>
+                        <p>• Ejemplo 3: <span class="text-white">Guantes NR1 Kids Azul - $145.000 - Infantil.jpg</span></p>
+                        <p>• Ejemplo 4: <span class="text-white">Spray Activador Grip NR1 - $45.000 - Activar NR1.jpg</span></p>
+                    </div>
+                </div>
+
+                <!-- Paso 2: Código Google Apps Script -->
+                <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800">
+                    <div class="flex items-center justify-between mb-2">
+                        <h4 class="text-sm font-bold text-yellow-400 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-yellow-400 text-slate-950 text-xs flex items-center justify-center font-extrabold">2</span>
+                            Conector Google Apps Script (Cero mantenimiento)
+                        </h4>
+                        <button onclick="copyAppsScriptCode()" id="btn-copy-script" class="px-3 py-1.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Copiar Código</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-3">
+                        Ve a <a href="https://script.google.com" target="_blank" class="text-blue-400 underline">script.google.com</a>, crea un proyecto nuevo, pega este código, reemplaza <code class="text-white">TU_ID_CARPETA_DRIVE</code> y dale en <strong>Implementar &gt; Nueva implementación &gt; Aplicación web (Acceso: Cualquier persona)</strong>.
+                    </p>
+                    <pre id="apps-script-code" class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 text-[11px] font-mono text-slate-300 overflow-x-auto leading-relaxed">function doGet(e) {
+  // Pega aquí el ID de tu carpeta pública de Google Drive
+  var FOLDER_ID = e.parameter.folderId || "TU_ID_CARPETA_DRIVE";
+  var folder = DriveApp.getFolderById(FOLDER_ID);
+  var files = folder.getFiles();
+  var catalog = [];
+
+  while (files.hasNext()) {
+    var file = files.next();
+    var mime = file.getMimeType();
+    if (mime.indexOf("image/") === 0) {
+      catalog.push({
+        id: file.getId(),
+        name: file.getName(),
+        updated: file.getLastUpdated().getTime()
+      });
+    }
+  }
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "ok", items: catalog }))
+    .setMimeType(ContentService.MimeType.JSON);
+}</pre>
+                </div>
+
+                <!-- Paso 3: Conectar URL Web App y Número WhatsApp -->
+                <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
+                    <h4 class="text-sm font-bold text-yellow-400 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-yellow-400 text-slate-950 text-xs flex items-center justify-center font-extrabold">3</span>
+                        Conectar a esta Landing Page
+                    </h4>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">URL de la Web App de Google Apps Script:</label>
+                        <input type="url" id="input-webapp-url" placeholder="https://script.google.com/macros/s/AKfycb.../exec" 
+                               class="w-full bg-slate-900 border border-slate-700 focus:border-yellow-400 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">ID de Carpeta Drive (Opcional si ya está en el script):</label>
+                            <input type="text" id="input-folder-id" placeholder="Ej: 1A2B3C4D5E6F7G8H9I0J" 
+                                   class="w-full bg-slate-900 border border-slate-700 focus:border-yellow-400 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp de Ventas NR1 (Con código país):</label>
+                            <input type="text" id="input-whatsapp-number" placeholder="573001234567" 
+                                   class="w-full bg-slate-900 border border-slate-700 focus:border-yellow-400 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Modal -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-5 mt-5 border-t border-slate-800">
+                <button onclick="resetToDemoCatalog()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold cursor-pointer">
+                    Restaurar Catálogo Demo
+                </button>
+                <div class="flex items-center gap-3 w-full sm:w-auto">
+                    <button onclick="saveDriveConfig()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold text-xs transition-colors cursor-pointer">
+                        Guardar y Sincronizar Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST DE NOTIFICACIÓN PERSONALIZADO (Sin alert()) -->
+    <div id="toast-notification" class="fixed bottom-24 right-6 z-50 hidden transform transition-all duration-300 translate-y-4 opacity-0">
+        <div class="bg-slate-900 border border-yellow-400/50 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm">
+            <i id="toast-icon" class="fa-solid fa-circle-check text-yellow-400 text-lg"></i>
+            <p id="toast-message" class="text-xs font-medium leading-snug">Notificación</p>
+        </div>
+    </div>
+
+    <!-- LÓGICA JAVASCRIPT: PARSER DE GOOGLE DRIVE, CATÁLOGO EN VIVO Y WHATSAPP -->
+    <script>
+        // =========================================================================
+        // 1. CONFIGURACIÓN Y ESTADO GLOBAL
+        // =========================================================================
+        const STORAGE_KEYS = {
+            WEBAPP_URL: 'nr1_drive_webapp_url',
+            FOLDER_ID: 'nr1_drive_folder_id',
+            WHATSAPP: 'nr1_whatsapp_number',
+            CACHED_ITEMS: 'nr1_cached_drive_items'
+        };
+
+        // Número de WhatsApp por defecto (editable en el modal de configuración)
+        const DEFAULT_WHATSAPP = '573000000000';
+
+        // Precarga realista de demostración basada en los destacados de @nelramosoficial1
+        const DEMO_FILES_FROM_DRIVE = [
+            {
+                id: 'demo-1',
+                name: 'Guantes NR1 Pro Gold Élite - $280.000 - Guantes.jpg',
+                imageUrl: 'https://placehold.co/600x600/111827/FACC15?text=NR1+PRO+GOLD',
+                badge: 'Más Vendido'
+            },
+            {
+                id: 'demo-2',
+                name: 'Guantes NR1 Edición Rinoceronte 🦏 - $320.000 - Edición Limitada.jpg',
+                imageUrl: 'https://placehold.co/600x600/0F172A/38BDF8?text=EDICION+RINOCERONTE',
+                badge: 'Edición Limitada'
+            },
+            {
+                id: 'demo-3',
+                name: 'Guantes NR1 Red Fire Pro - $265.000 - Guantes.jpg',
+                imageUrl: 'https://placehold.co/600x600/1F1216/EF4444?text=NR1+RED+FIRE',
+                badge: 'Látex 4mm'
+            },
+            {
+                id: 'demo-4',
+                name: 'Guantes NR1 Entrenamiento Pro - $195.000 - Guantes.jpg',
+                imageUrl: 'https://placehold.co/600x600/111827/E2E8F0?text=NR1+ENTRENAMIENTO',
+                badge: 'Alta Resistencia'
+            },
+            {
+                id: 'demo-5',
+                name: 'Guantes NR1 Kids Campeones - $145.000 - Infantil.jpg',
+                imageUrl: 'https://placehold.co/600x600/06281E/34D399?text=NR1+INFANTIL+KIDS',
+                badge: 'Todas las Tallas'
+            },
+            {
+                id: 'demo-6',
+                name: 'Guantes NR1 Kids Edición Azul - $150.000 - Infantil.jpg',
+                imageUrl: 'https://placehold.co/600x600/0C1E35/60A5FA?text=NR1+KIDS+AZUL',
+                badge: 'Niños'
+            },
+            {
+                id: 'demo-7',
+                name: 'Kit Activar NR1 Spray Grip + Jabón Látex - $65.000 - Activar NR1.jpg',
+                imageUrl: 'https://placehold.co/600x600/1E1B0B/FACC15?text=KIT+ACTIVAR+NR1',
+                badge: 'Esencial'
+            },
+            {
+                id: 'demo-8',
+                name: 'Maleta Porta Guantes Oficial NR1 - $75.000 - Activar NR1.jpg',
+                imageUrl: 'https://placehold.co/600x600/111827/94A3B8?text=MALETA+NR1',
+                badge: 'Accesorio Pro'
+            }
+        ];
+
+        let allProducts = [];
+        let currentCategory = 'Todos';
+
+        // =========================================================================
+        // 2. PARSER INTELIGENTE DE NOMBRES DE ARCHIVO DE GOOGLE DRIVE
+        // =========================================================================
+        /**
+         * Convierte un archivo crudo de Google Drive (ej: "Guantes NR1 Pro - $280.000 - Guantes.jpg")
+         * en un objeto estructurado listo para venderse en la web.
+         */
+        function parseDriveFileToProduct(fileObj) {
+            // Eliminar extensión (.jpg, .png, .webp, .jpeg)
+            const rawName = fileObj.name || 'Referencia NR1';
+            const cleanName = rawName.replace(/\.[^/.]+$/, '').trim();
+
+            // Dividir por guiones rodeados de espacios o guiones simples
+            const parts = cleanName.split(/\s*-\s*/);
+
+            let title = parts[0] ? parts[0].trim() : cleanName;
+            let price = 'Consultar';
+            let category = 'Guantes';
+
+            if (parts.length >= 3) {
+                price = parts[1].trim();
+                category = parts[2].trim();
+            } else if (parts.length === 2) {
+                // Detectar si la segunda parte es precio o categoría
+                if (parts[1].includes('$') || /\d/.test(parts[1])) {
+                    price = parts[1].trim();
+                } else {
+                    category = parts[1].trim();
+                }
+            }
+
+            // Normalizar categoría para coincidir con los filtros
+            const lowerCat = category.toLowerCase();
+            if (lowerCat.includes('limitada') || lowerCat.includes('edicion') || lowerCat.includes('edición')) {
+                category = 'Edición Limitada';
+            } else if (lowerCat.includes('infantil') || lowerCat.includes('niño') || lowerCat.includes('kids')) {
+                category = 'Infantil';
+            } else if (lowerCat.includes('activar') || lowerCat.includes('accesorio') || lowerCat.includes('kit')) {
+                category = 'Activar NR1';
+            } else {
+                category = 'Guantes';
+            }
+
+            // Construir URL directa de imagen de Google Drive en alta resolución
+            const imageUrl = fileObj.imageUrl 
+                ? fileObj.imageUrl 
+                : `https://drive.google.com/thumbnail?id=${fileObj.id}&sz=w1000`;
+
+            return {
+                id: fileObj.id,
+                title: title,
+                price: price,
+                category: category,
+                imageUrl: imageUrl,
+                badge: fileObj.badge || (category === 'Edición Limitada' ? 'Edición Limitada' : 'Disponible')
+            };
+        }
+
+        // =========================================================================
+        // 3. SINCRONIZACIÓN CON GOOGLE DRIVE (APPS SCRIPT WEB APP API)
+        // =========================================================================
+        async function syncCatalogFromDrive(showFeedback = false) {
+            const webAppUrl = localStorage.getItem(STORAGE_KEYS.WEBAPP_URL);
+            const folderId = localStorage.getItem(STORAGE_KEYS.FOLDER_ID);
+            const syncText = document.getElementById('drive-sync-text');
+            const refreshIcon = document.getElementById('refresh-icon');
+            const loader = document.getElementById('catalog-loader');
+            const grid = document.getElementById('products-grid');
+
+            // Si no hay Web App configurada aún, cargar catálogo demo
+            if (!webAppUrl) {
+                allProducts = DEMO_FILES_FROM_DRIVE.map(parseDriveFileToProduct);
+                syncText.textContent = 'Catálogo Demo • Listo para Conectar Drive';
+                renderProducts();
+                if (showFeedback) {
+                    showToast('Mostrando catálogo demo. Configura tu carpeta Drive abajo para sincronizar tus fotos.', 'info');
+                }
+                return;
+            }
+
+            // Mostrar estado de carga
+            refreshIcon.classList.add('fa-spin');
+            if (allProducts.length === 0) {
+                loader.classList.remove('hidden');
+                grid.classList.add('hidden');
+            }
+
+            try {
+                const url = new URL(webAppUrl);
+                if (folderId) {
+                    url.searchParams.set('folderId', folderId);
+                }
+                // Evitar caché del navegador para detectar fotos borradas o nuevas al instante
+                url.searchParams.set('t', Date.now());
+
+                const response = await fetch(url.toString());
+                if (!response.ok) throw new Error('Error de red al consultar Google Drive');
+
+                const data = await response.json();
+                if (data.status === 'ok' && Array.isArray(data.items)) {
+                    // Guardar caché local por seguridad
+                    localStorage.setItem(STORAGE_KEYS.CACHED_ITEMS, JSON.stringify(data.items));
+                    
+                    allProducts = data.items.map(parseDriveFileToProduct);
+                    syncText.innerHTML = `<span class="text-green-400 font-semibold">En vivo desde Drive</span> (${allProducts.length} refs)`;
+                    
+                    if (showFeedback) {
+                        showToast(`Inventario actualizado: ${allProducts.length} referencias cargadas desde Drive.`, 'success');
+                    }
+                } else {
+                    throw new Error('Formato de respuesta inválido');
+                }
+            } catch (error) {
+                console.error('Error sincronizando Drive:', error);
+                // Intentar cargar última caché o volver a demo
+                const cached = localStorage.getItem(STORAGE_KEYS.CACHED_ITEMS);
+                if (cached) {
+                    allProducts = JSON.parse(cached).map(parseDriveFileToProduct);
+                    syncText.textContent = 'Modo Offline (Última copia de Drive)';
+                } else {
+                    allProducts = DEMO_FILES_FROM_DRIVE.map(parseDriveFileToProduct);
+                    syncText.textContent = 'Catálogo Demo (Verifica URL de Drive)';
+                }
+                if (showFeedback) {
+                    showToast('No se pudo conectar con Drive. Verifica que la carpeta sea pública y la URL sea correcta.', 'error');
+                }
+            } finally {
+                refreshIcon.classList.remove('fa-spin');
+                loader.classList.add('hidden');
+                grid.classList.remove('hidden');
+                renderProducts();
+            }
+        }
+
+        // =========================================================================
+        // 4. RENDERIZADO DE TARJETAS Y FILTROS
+        // =========================================================================
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const emptyState = document.getElementById('empty-state');
+            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+
+            const filtered = allProducts.filter(item => {
+                const matchesCat = currentCategory === 'Todos' || item.category === currentCategory;
+                const matchesSearch = item.title.toLowerCase().includes(searchQuery) || 
+                                      item.category.toLowerCase().includes(searchQuery) ||
+                                      item.price.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = filtered.map(product => `
+                <article class="group bg-slate-900/90 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between transition-all duration-300 card-glow">
+                    <div>
+                        <!-- Contenedor Imagen con Lightbox al hacer clic -->
+                        <div onclick="openProductModal('${product.id}')" class="relative aspect-square bg-slate-950 overflow-hidden cursor-pointer">
+                            <img src="${product.imageUrl}" 
+                                 alt="${product.title}" 
+                                 loading="lazy"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x600/111827/FACC15?text=NR1+OFICIAL';"
+                                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Badge superior -->
+                            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-950/85 backdrop-blur-md border border-slate-700/80 text-[10px] font-bold uppercase tracking-wider text-yellow-400">
+                                    ${product.category}
+                                </span>
+                            </div>
+
+                            <!-- Icono Zoom -->
+                            <div class="absolute bottom-3 right-3 w-9 h-9 rounded-xl bg-slate-950/80 text-white opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center border border-slate-700">
+                                <i class="fa-solid fa-expand text-xs"></i>
+                            </div>
+                        </div>
+
+                        <!-- Info Producto -->
+                        <div class="p-5">
+                            <h3 onclick="openProductModal('${product.id}')" class="font-display text-2xl font-bold text-white uppercase tracking-wide leading-tight group-hover:text-yellow-400 transition-colors cursor-pointer">
+                                ${product.title}
+                            </h3>
+                            <div class="flex items-baseline justify-between mt-2">
+                                <span class="text-xl font-extrabold text-yellow-400">${product.price}</span>
+                                <span class="text-[11px] text-emerald-400 font-medium flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> En stock
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Compra Directa WhatsApp -->
+                    <div class="px-5 pb-5 pt-1">
+                        <button onclick="orderProductWhatsApp('${encodeURIComponent(product.title)}', '${encodeURIComponent(product.price)}')" 
+                                class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-green-500 text-white hover:text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 border border-slate-700 hover:border-green-400 cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function filterCatalog(category) {
+            currentCategory = category;
+
+            // Actualizar estado visual de los botones
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.classList.remove('bg-slate-800', 'text-slate-300');
+                    btn.classList.add('bg-yellow-400', 'text-slate-950');
+                } else {
+                    btn.classList.remove('bg-yellow-400', 'text-slate-950');
+                    btn.classList.add('bg-slate-800', 'text-slate-300');
+                }
+            });
+
+            renderProducts();
+
+            // Scroll suave al catálogo si se hizo clic desde el Hero
+            const catalogEl = document.getElementById('catalogo');
+            if (window.scrollY < catalogEl.offsetTop - 100) {
+                catalogEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function handleSearch() {
+            renderProducts();
+        }
+
+        // =========================================================================
+        // 5. INTEGRACIÓN WHATSAPP DIRECTA
+        // =========================================================================
+        function getWhatsAppNumber() {
+            return localStorage.getItem(STORAGE_KEYS.WHATSAPP) || DEFAULT_WHATSAPP;
+        }
+
+        function orderProductWhatsApp(encodedTitle, encodedPrice) {
+            const title = decodeURIComponent(encodedTitle);
+            const price = decodeURIComponent(encodedPrice);
+            const phone = getWhatsAppNumber();
+            const message = `Hola Nelson Ramos NR1 👋, estoy interesado en esta referencia de tu catálogo:\n\n🧤 *Producto:* ${title}\n💰 *Precio:* ${price}\n\n¿Qué tallas tienen disponibles para envío?`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function openWhatsAppGeneral() {
+            const phone = getWhatsAppNumber();
+            const message = `Hola Nelson Ramos NR1 👋, vengo desde tu página oficial y quiero asesoría sobre guantes NR1 / entrenamientos de arqueros.`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function openWhatsAppCustom(customText) {
+            const phone = getWhatsAppNumber();
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(customText)}`, '_blank', 'noopener,noreferrer');
+        }
+
+        // =========================================================================
+        // 6. MODALES (VISTA PREVIA PRODUCTO Y CONFIGURACIÓN DRIVE)
+        // =========================================================================
+        function openProductModal(productId) {
+            const product = allProducts.find(p => p.id === productId);
+            if (!product) return;
+
+            document.getElementById('modal-img').src = product.imageUrl;
+            document.getElementById('modal-cat').textContent = product.category;
+            document.getElementById('modal-title').textContent = product.title;
+            document.getElementById('modal-price').textContent = product.price;
+
+            const waBtn = document.getElementById('modal-wa-btn');
+            waBtn.onclick = () => orderProductWhatsApp(encodeURIComponent(product.title), encodeURIComponent(product.price));
+
+            const modal = document.getElementById('product-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function openDriveConfigModal() {
+            document.getElementById('input-webapp-url').value = localStorage.getItem(STORAGE_KEYS.WEBAPP_URL) || '';
+            document.getElementById('input-folder-id').value = localStorage.getItem(STORAGE_KEYS.FOLDER_ID) || '';
+            document.getElementById('input-whatsapp-number').value = localStorage.getItem(STORAGE_KEYS.WHATSAPP) || DEFAULT_WHATSAPP;
+
+            const modal = document.getElementById('drive-config-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeDriveConfigModal() {
+            const modal = document.getElementById('drive-config-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function saveDriveConfig() {
+            const webAppUrl = document.getElementById('input-webapp-url').value.trim();
+            const folderId = document.getElementById('input-folder-id').value.trim();
+            const whatsapp = document.getElementById('input-whatsapp-number').value.replace(/\D/g, '');
+
+            if (webAppUrl) {
+                localStorage.setItem(STORAGE_KEYS.WEBAPP_URL, webAppUrl);
+            } else {
+                localStorage.removeItem(STORAGE_KEYS.WEBAPP_URL);
+            }
+
+            if (folderId) {
+                localStorage.setItem(STORAGE_KEYS.FOLDER_ID, folderId);
+            } else {
+                localStorage.removeItem(STORAGE_KEYS.FOLDER_ID);
+            }
+
+            if (whatsapp) {
+                localStorage.setItem(STORAGE_KEYS.WHATSAPP, whatsapp);
+            }
+
+            closeDriveConfigModal();
+            syncCatalogFromDrive(true);
+        }
+
+        function resetToDemoCatalog() {
+            localStorage.removeItem(STORAGE_KEYS.WEBAPP_URL);
+            localStorage.removeItem(STORAGE_KEYS.FOLDER_ID);
+            localStorage.removeItem(STORAGE_KEYS.CACHED_ITEMS);
+            document.getElementById('input-webapp-url').value = '';
+            document.getElementById('input-folder-id').value = '';
+            closeDriveConfigModal();
+            syncCatalogFromDrive(true);
+        }
+
+        // Copiar código Apps Script usando método seguro para iframes
+        function copyAppsScriptCode() {
+            const codeText = document.getElementById('apps-script-code').innerText;
+            const textArea = document.createElement('textarea');
+            textArea.value = codeText;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Código de Google Apps Script copiado al portapapeles.', 'success');
+            } catch (err) {
+                showToast('No se pudo copiar automáticamente. Selecciona el texto y cópialo.', 'error');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // Sistema de Notificaciones Toast
+        let toastTimeout;
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast-notification');
+            const msgEl = document.getElementById('toast-message');
+            const iconEl = document.getElementById('toast-icon');
+
+            msgEl.textContent = message;
+            if (type === 'error') {
+                iconEl.className = 'fa-solid fa-circle-exclamation text-red-400 text-lg';
+            } else if (type === 'info') {
+                iconEl.className = 'fa-solid fa-circle-info text-blue-400 text-lg';
+            } else {
+                iconEl.className = 'fa-solid fa-circle-check text-yellow-400 text-lg';
+            }
+
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-4', 'opacity-0');
+            }, 10);
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-4', 'opacity-0');
+                setTimeout(() => toast.classList.add('hidden'), 300);
+            }, 4000);
+        }
+
+        // =========================================================================
+        // 7. INICIALIZACIÓN AL CARGAR LA PÁGINA
+        // =========================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+            syncCatalogFromDrive(false);
+        });
+    </script>
+</body>
+</html>
